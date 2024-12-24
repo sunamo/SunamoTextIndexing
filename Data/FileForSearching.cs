@@ -1,22 +1,16 @@
 namespace SunamoTextIndexing.Data;
 
 
-public class FileForSearching
+public class FileForSearching(string path)
 {
     public bool surelyNo = false;
-    public List<int> foundedLines = new List<int>();
-    public List<string> linesLower = null;
-    public List<string> lines = null;
-    string path = null;
-
-    public FileForSearching(string path)
-    {
-        this.path = path;
-    }
+    public List<int> foundedLines = [];
+    public List<string> linesLower = [];
+    public List<string> lines = [];
 
     public async Task Init()
     {
-        lines = (await File.ReadAllLinesAsync(path)).ToList();
+        lines = [.. (await File.ReadAllLinesAsync(path))];
         linesLower = new List<string>(lines.Count);
         foreach (var item in lines)
         {
