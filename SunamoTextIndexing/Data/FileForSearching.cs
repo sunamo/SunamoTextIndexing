@@ -31,7 +31,7 @@ public class FileForSearching(string path)
     /// </summary>
     public async Task Init()
     {
-        Lines = [.. (await File.ReadAllLinesAsync(path))];
+        Lines = [.. (await FileAsync.ReadAllLinesAsync(path))];
         LowercaseLines = new List<string>(Lines.Count);
         foreach (var item in Lines)
         {
