@@ -1,5 +1,10 @@
 # SunamoTextIndexing
 
+## Short description
+
+Knihovna pro rychlé vyhledávání v obsahu textových souborů pomocí indexování. Součást sbírky pinp s testy a Runnerem.
+
+
 Fast searching in content of text files
 
 ## Overview
